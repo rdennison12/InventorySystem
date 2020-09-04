@@ -8,3 +8,4 @@
 * Create second UI canvas with images
 * Adding functionality to the Inventory System
 * Updated InventorySlotUI script
+* Learned ho to use the Unity Debugger

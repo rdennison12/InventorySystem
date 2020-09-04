@@ -13,14 +13,15 @@ namespace GameDevTV.Inventories
     /// `EquipableItem`.
     /// </remarks>
     [CreateAssetMenu(menuName = ("GameDevTV/Inventory/Item"))]
-    public class InventoryItem : ScriptableObject, ISerializationCallbackReceiver    {
+    public class InventoryItem : ScriptableObject, ISerializationCallbackReceiver
+    {
         // CONFIG DATA
         [Tooltip("Auto-generated UUID for saving/loading. Clear this field if you want to generate a new one.")]
         [SerializeField] string itemID = null;
         [Tooltip("Item name to be displayed in UI.")]
         [SerializeField] string displayName = null;
         [Tooltip("Item description to be displayed in UI.")]
-        [SerializeField][TextArea] string description = null;
+        [SerializeField] [TextArea] string description = null;
         [Tooltip("The UI icon to represent this item in the inventory.")]
         [SerializeField] Sprite icon = null;
         [Tooltip("If true, multiple items of this type can be stacked in the same inventory slot.")]
@@ -61,7 +62,7 @@ namespace GameDevTV.Inventories
             if (itemID == null || !itemLookupCache.ContainsKey(itemID)) return null;
             return itemLookupCache[itemID];
         }
-        
+
         public Sprite GetIcon()
         {
             return icon;
@@ -76,7 +77,7 @@ namespace GameDevTV.Inventories
         {
             return stackable;
         }
-        
+
         public string GetDisplayName()
         {
             return displayName;
@@ -88,7 +89,7 @@ namespace GameDevTV.Inventories
         }
 
         // PRIVATE
-        
+
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
             // Generate and save a new UUID if this is blank.
