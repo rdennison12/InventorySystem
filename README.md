@@ -11,3 +11,4 @@
 * Learned ho to use the Unity Debugger
 * Reviewed Pickup, Drop, Saving, and Loading systems
 * Refactored and added stackable items functionality
+* Completed the refactor
