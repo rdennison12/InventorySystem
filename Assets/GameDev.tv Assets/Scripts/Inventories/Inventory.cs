@@ -228,25 +228,25 @@ namespace GameDevTV.Inventories
     
         object ISaveable.CaptureState()
         {
-            var slotRecords = new InventorySlotRecord[inventorySize];
+            var slotStrings = new InventorySlotRecord[inventorySize];
             for (int i = 0; i < inventorySize; i++)
             {
                 if (slots[i].item != null)
                 {
-                    slotRecords[i].itemID = slots[i].item.GetItemID();
-                    slotRecords[i].number = slots[i].number;
+                    slotStrings[i].itemID = slots[i].item.GetItemID();
+                    slotStrings[i].number = slots[i].number;
                 }
             }
-            return slotRecords;
+            return slotStrings;
         }
 
         void ISaveable.RestoreState(object state)
         {
-            var slotRecords = (InventorySlotRecord[])state;
+            var slotStrings = (InventorySlotRecord[])state;
             for (int i = 0; i < inventorySize; i++)
             {
-                slots[i].item = InventoryItem.GetFromID(slotRecords[i].itemID);
-                slots[i].number = slotRecords[i].number;
+                slots[i].item = InventoryItem.GetFromID(slotStrings[i].itemID);
+                slots[i].number = slotStrings[i].number;
             }
             if (inventoryUpdated != null)
             {
