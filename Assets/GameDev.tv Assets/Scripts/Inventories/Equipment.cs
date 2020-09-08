@@ -24,7 +24,7 @@ namespace GameDevTV.Inventories
         public event Action equipmentUpdated;
 
         /// <summary>
-        /// Return the item in the given equipment location.
+        /// Return the item in the given equip location.
         /// </summary>
         public EquipableItem GetItemInSlot(EquipLocation equipLocation)
         {
@@ -37,7 +37,7 @@ namespace GameDevTV.Inventories
         }
 
         /// <summary>
-        /// Add an item to the given equipment location. Do not attempt to equipment to
+        /// Add an item to the given equip location. Do not attempt to equip to
         /// an incompatible slot.
         /// </summary>
         public void AddItem(EquipLocation slot, EquipableItem item)

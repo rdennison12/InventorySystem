@@ -12,4 +12,5 @@
 * Reviewed Pickup, Drop, Saving, and Loading systems
 * Refactored and added stackable items functionality
 * Completed the refactor
-* Adding Equipment System
+* Added Equipment System
+* Added Action System
